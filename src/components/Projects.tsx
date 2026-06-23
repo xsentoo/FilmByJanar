@@ -27,7 +27,7 @@ const PROJECTS_DATA: Project[] = [
     id: 'civil-wedding',
     num: '01',
     title: 'CIVIL WEDDING & RECEPTION',
-    description: 'The elegance of your first promises combined with the grandeur of your celebration. From the intimacy of the morning preparations to the electric energy of the dance floor, every moment is captured with a sharp, modern cinematic aesthetic. More than just a memory—this is the authentic and compelling feature film of your definitive day.',
+    description: 'THE ELEGANCE OF YOUR FIRST PROMISES COMBINED WITH THE GRANDEUR OF YOUR CELEBRATION. FROM THE INTIMACY OF THE MORNING PREPARATIONS TO THE ELECTRIC ENERGY OF THE DANCE FLOOR, EVERY MOMENT IS CAPTURED WITH A SHARP, MODERN CINEMATIC AESTHETIC. MORE THAN JUST A MEMORY—THIS IS THE AUTHENTIC AND COMPELLING FEATURE FILM OF YOUR DEFINITIVE DAY.',
     photos: [
       { src: '/civil_wedding/1.jpg', caption: 'THE VOWS' },
       { src: '/civil_wedding/AJ401092.JPG', caption: 'WARMING TONES' },
@@ -43,7 +43,7 @@ const PROJECTS_DATA: Project[] = [
     id: 'hindu-wedding',
     num: '02',
     title: 'TRADITIONAL & RELIGIOUS WEDDINGS',
-    description: 'The brilliance of colors, the depth of sacred rituals, and the richness of shared cultural heritage. We document traditional celebrations—including Hindu weddings, Nikkah, and sacred unions—with absolute reverence for their symbols. Our goal is to elevate the joining of your two families into a visually powerful, epic cinematic journey.',
+    description: 'THE BRILLIANCE OF COLORS, THE DEPTH OF SACRED RITUALS, AND THE RICHNESS OF SHARED CULTURAL HERITAGE. WE DOCUMENT TRADITIONAL CELEBRATIONS—INCLUDING HINDU WEDDINGS, NIKKAH, AND SACRED UNIONS—WITH ABSOLUTE REVERENCE FOR THEIR SYMBOLS. OUR GOAL IS TO ELEVATE THE JOINING OF YOUR TWO FAMILIES INTO A VISUALLY POWERFUL, EPIC CINEMATIC JOURNEY.',
     photos: [
       { src: '/civil_wedding/AJ401364.JPG', caption: 'SACRED UNION' },
       { src: '/civil_wedding/AJ401374.JPG', caption: 'THE RITUAL' },
@@ -59,7 +59,7 @@ const PROJECTS_DATA: Project[] = [
     id: 'preshoot',
     num: '03',
     title: 'THE PRE-WEDDING SESSION',
-    description: 'A timeless interlude, captured under the soft glow of the golden hour in a location tailored to your story. This intimate session allows you to connect effortlessly with the lens while creating a polished, cinematic preview film—perfect for officially revealing your wedding date to your guests.',
+    description: 'A TIMELESS INTERLUDE, CAPTURED UNDER THE SOFT GLOW OF THE GOLDEN HOUR IN A LOCATION TAILAGE TO YOUR STORY. THIS INTIMATE SESSION ALLOWS YOU TO CONNECT EFFORTLESSLY WITH THE LENS WHILE CREATING A POLISHED, CINEMATIC PREVIEW FILM—PERFECT FOR OFFICIALLY REVEALING YOUR WEDDING DATE TO YOUR GUESTS.',
     photos: [
       { src: '/civil_wedding/AJ408644.JPG', caption: 'GOLDEN HOUR' },
       { src: '/civil_wedding/AJ408671.JPG', caption: 'QUIET MOMENT' },
@@ -75,7 +75,7 @@ const PROJECTS_DATA: Project[] = [
     id: 'engagement',
     num: '04',
     title: 'ENGAGEMENT & PROLOGUE',
-    description: 'The opening chapter of your shared commitment. We capture the spontaneous joy, the warmth of your families, and the initial steps of your lifetime journey through luminous, authentic, and emotionally charged frames.',
+    description: 'THE OPENING CHAPTER OF YOUR SHARED COMMITMENT. WE CAPTURE THE SPONTANEOUS JOY, THE WARMTH OF YOUR FAMILIES, AND THE INITIAL STEPS OF YOUR LIFETIME JOURNEY THROUGH LUMINOUS, AUTHENTIC, AND EMOTIONALLY CHARGED FRAMES.',
     photos: [
       { src: '/civil_wedding/AJ408720.JPG', caption: 'THE EMBRACE' },
       { src: '/civil_wedding/AJ408736.JPG', caption: 'NEW CHAPTER' },
