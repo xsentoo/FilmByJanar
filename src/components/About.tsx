@@ -63,13 +63,13 @@ export const About: React.FC = () => {
             <img src={img9596} alt="Photographer Portrait" className="about-portrait-img" />
           </div>
           <p className="about-paragraph-text">
-            I'M A VIDEOGRAPHER DRIVEN BY STORYTELLING. I CREATE
-            VISUALS THAT STAND OUT NOT ONLY FOR THEIR AESTHETIC BUT
-            FOR THE FEELING THEY EVOKE. MY VISION IS TO BRING VALUE TO
-            BUSINESSES BY SHOWCASING THEIR ESSENCE WITH PRECISION
-            AND RESPECT, AND TO COUPLES BY CAPTURING THE TRUEST
-            MOMENTS OF THEIR CONNECTION. EVERY STORY DESERVES TO
-            BE TOLD IN A WAY THAT MOVES AND INSPIRES.
+            AS A DIRECTOR AND STORYTELLER, I CRAFT EXCLUSIVE WEDDING FILMS ACROSS
+            FRANCE, SWITZERLAND, AND EUROPE. MY APPROACH TRANSCENDS TRADITIONAL
+            DOCUMENTATION. I CAPTURE THE INVISIBLE. THE TENSION OF A FLEETING GLANCE,
+            THE SOLEMNITY OF ANCESTRAL RITUELS, AND THE RAW EMOTION THAT ECHOES
+            THROUGH A ROOM. WHEN COUPLES ENTRUST ME WITH THEIR VISUAL LEGACY, MY
+            MISSION IS TO TRANSFORM THEIR FLEETING MOMENTS INTO A TIMELESS,
+            BREATHTAKING CINEMATIC MASTERPIECE.
           </p>
         </div>
 
@@ -79,7 +79,7 @@ export const About: React.FC = () => {
             <div className="about-right-title">
               <div className="about-right-title-line">THE</div>
               <div className="about-right-title-line">ART OF</div>
-              <div className="about-right-title-line">NOTICING</div>
+              <div className="about-right-title-line">STORYTELLING</div>
             </div>
           </div>
           <div className="about-right-image-wrapper">

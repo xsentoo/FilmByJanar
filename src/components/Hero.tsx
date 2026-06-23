@@ -50,12 +50,11 @@ export const Hero: React.FC = () => {
         {/* Description — Right side */}
         <div className="hero-bio">
           <p>
-            I see the world through light, motion, and the
-            subtle details that shape a story. Whether it's
-            a wedding or a brand, my goal remains the
-            same, to capture truth through a cinematic
-            lens. Every video is a way to observe, to feel,
-            and to translate emotion.
+            Every love story is a unique script waiting to be told.
+            Behind the lens, my purpose is not simply to capture footage,
+            but to sculpt your memories. I translate the raw essence of your rituals,
+            your tears, and your shared laughter into true cinematic masterpieces.
+            Your visual legacy begins here.
           </p>
         </div>
       </div>
