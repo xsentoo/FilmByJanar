@@ -24,24 +24,8 @@ interface EventData {
 
 const EVENTS_DATA: EventData[] = [
   {
-    id: 'corporate-events',
-    num: '01',
-    title: 'Corporate Events',
-    description: 'CINEMATIC COVERAGE OF HIGH-PROFILE CORPORATE EVENTS, CONFERENCES, AND PRODUCT LAUNCHES. CAPTURING THE PROFESSIONAL ENERGY, KEYNOTE MOMENTS, AND NETWORKING INTERACTIONS IN POLISHED, SHARP FRAMES.',
-    photos: [
-      { src: '/civil_wedding/DSC02408.JPG', caption: 'KEYNOTE PRESENTATION' },
-      { src: '/civil_wedding/DSC02421.JPG', caption: 'NETWORKING SESSION' },
-      { src: '/civil_wedding/DSC02438.JPG', caption: 'THE STAGE' },
-      { src: '/civil_wedding/DSC02441.JPG', caption: 'CLOSING GALA' }
-    ],
-    review: {
-      text: "EXCEPTIONAL PROFESSIONALISM. THE CINEMATIC HIGHLIGHT FILM WAS A HUGE HIT WITH OUR CLIENTS.",
-      author: "TechCorp Events Director"
-    }
-  },
-  {
     id: 'work-with-artist',
-    num: '02',
+    num: '01',
     title: 'WORK WITH ARTISTS',
     description: 'COLLABORATING WITH CREATIVE MINDS AND PERFORMERS TO TRANSLATE MUSIC, PASSION, AND ARTISTIC VISION INTO STUNNING CINEMATIC PORTRAITS. WE CAPTURE THE RAW EMOTION, COMMANDING STAGE PRESENCE, AND UNIQUE EXPRESSION OF ARTISTS IN THEIR ELEMENT, TRANSFORMING PERFORMANCE INTO VISUAL POETRY.',
     photos: [
