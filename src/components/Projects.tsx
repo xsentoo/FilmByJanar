@@ -86,22 +86,6 @@ const PROJECTS_DATA: Project[] = [
       text: "ABSOLUTELY STUNNING VIDEOGRAPHY! THE VIBRANT COLORS AND RITUALS WERE PRESERVED BEAUTIFULLY.",
       author: "Priya & Amit"
     }
-  },
-  {
-    id: 'work-with-artists',
-    num: '05',
-    title: 'WORK WITH ARTISTS',
-    description: 'COLLABORATING WITH CREATIVE MINDS AND PERFORMERS TO TRANSLATE MUSIC, PASSION, AND ARTISTIC VISION INTO STUNNING CINEMATIC PORTRAITS. WE CAPTURE THE RAW EMOTION, COMMANDING STAGE PRESENCE, AND UNIQUE EXPRESSION OF ARTISTS IN THEIR ELEMENT, TRANSFORMING PERFORMANCE INTO VISUAL POETRY.',
-    photos: [
-      { src: '/civil_wedding/DSC02549-Modifier.JPG', caption: 'STAGE LIGHTS' },
-      { src: '/civil_wedding/DSC02560.JPG', caption: 'THE CROWD' },
-      { src: '/civil_wedding/DSC02993.JPG', caption: 'GUITAR SOLO' },
-      { src: '/civil_wedding/DSC02996.JPG', caption: 'FESTIVAL VIBES' }
-    ],
-    review: {
-      text: "JANAR'S VISION IS INCREDIBLE. HE TRANSLATES ART AND MUSIC INTO PURE VISUAL POETRY.",
-      author: "Elena R. (Pianist)"
-    }
   }
 ];
 
