@@ -63,22 +63,22 @@ export const About: React.FC = () => {
             <img src={img9596} alt="Photographer Portrait" className="about-portrait-img" />
           </div>
           <p className="about-paragraph-text">
-            AS A DIRECTOR AND STORYTELLER, I CRAFT EXCLUSIVE WEDDING FILMS ACROSS
-            FRANCE, SWITZERLAND, AND EUROPE. MY APPROACH TRANSCENDS TRADITIONAL
-            DOCUMENTATION. I CAPTURE THE INVISIBLE. THE TENSION OF A FLEETING GLANCE,
-            THE SOLEMNITY OF ANCESTRAL RITUELS, AND THE RAW EMOTION THAT ECHOES
-            THROUGH A ROOM. WHEN COUPLES ENTRUST ME WITH THEIR VISUAL LEGACY, MY
-            MISSION IS TO TRANSFORM THEIR FLEETING MOMENTS INTO A TIMELESS,
-            BREATHTAKING CINEMATIC MASTERPIECE.
+            As a director and storyteller, I craft exclusive wedding films across
+            France, Switzerland, and Europe. My approach transcends traditional
+            documentation—I capture the invisible. The tension of a fleeting glance,
+            the solemnity of ancestral rituals, and the raw emotion that echoes
+            through a room. When couples entrust me with their visual legacy, my
+            mission is to transform their fleeting moments into a timeless,
+            breathtaking cinematic masterpiece.
           </p>
         </div>
-
+ 
         {/* Right Column */}
         <div className="about-right-col">
           <div className="about-right-header">
             <div className="about-right-title">
-              <div className="about-right-title-line">THE</div>
-              <div className="about-right-title-line">ART OF</div>
+              <div className="about-right-title-line">THE ART OF</div>
+              <div className="about-right-title-line">CINEMATIC</div>
               <div className="about-right-title-line">STORYTELLING</div>
             </div>
           </div>
