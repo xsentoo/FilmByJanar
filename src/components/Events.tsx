@@ -8,6 +8,17 @@ interface EventPhoto {
   caption: string;
 }
 
+interface EventVideo {
+  src: string;
+  caption: string;
+}
+
+interface EventMedia {
+  type: 'photo' | 'video';
+  src: string;
+  caption: string;
+}
+
 interface EventReview {
   text: string;
   author: string;
@@ -18,7 +29,9 @@ interface EventData {
   num: string;
   title: string;
   description: string;
-  photos: EventPhoto[];
+  photos?: EventPhoto[];
+  videos?: EventVideo[];
+  media?: EventMedia[];
   review?: EventReview;
 }
 
@@ -28,15 +41,15 @@ const EVENTS_DATA: EventData[] = [
     num: '01',
     title: 'WORK WITH ARTISTS',
     description: 'COLLABORATING WITH CREATIVE MINDS AND PERFORMERS TO TRANSLATE MUSIC, PASSION, AND ARTISTIC VISION INTO STUNNING CINEMATIC PORTRAITS. WE CAPTURE THE RAW EMOTION, COMMANDING STAGE PRESENCE, AND UNIQUE EXPRESSION OF ARTISTS IN THEIR ELEMENT, TRANSFORMING PERFORMANCE INTO VISUAL POETRY.',
-    photos: [
-      { src: '/civil_wedding/DSC02549-Modifier.JPG', caption: 'STAGE LIGHTS' },
-      { src: '/civil_wedding/DSC02560.JPG', caption: 'THE CROWD' },
-      { src: '/civil_wedding/DSC02993.JPG', caption: 'GUITAR SOLO' },
-      { src: '/civil_wedding/DSC02996.JPG', caption: 'FESTIVAL VIBES' },
-      { src: '/civil_wedding/DSC03099.JPG', caption: 'DANCE FLOOR' },
-      { src: '/civil_wedding/DSC03108.JPG', caption: 'THE CHEERS' },
-      { src: '/civil_wedding/DSC03127.JPG', caption: 'ELEGANT DECOR' },
-      { src: '/civil_wedding/DSC03129.JPG', caption: 'LATE NIGHT SHOT' }
+    media: [
+      { type: 'video', src: '/artist/teejay.mp4', caption: 'TEEJAY' },
+      { type: 'video', src: '/artist/havoc.mp4', caption: 'HAVOC' },
+      { type: 'video', src: '/artist/ratti.mp4', caption: 'RATTI' },
+      { type: 'photo', src: '/artist_photos/DSC02657.jpg', caption: 'THE INTENSITY' },
+      { type: 'photo', src: '/artist_photos/DSC07112.jpg', caption: 'IN THE ELEMENT' },
+      { type: 'photo', src: '/artist_photos/DSC07167.jpg', caption: 'BACKSTAGE' },
+      { type: 'photo', src: '/artist_photos/DSC07252.jpg', caption: 'THE FOCUS' },
+      { type: 'photo', src: '/artist_photos/DSC09629.jpg', caption: 'EXPRESSION' }
     ]
   }
 ];
@@ -47,6 +60,24 @@ export const Events: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
   const [activeEventPhotos, setActiveEventPhotos] = useState<EventPhoto[]>([]);
+  const [shuffledMedia, setShuffledMedia] = useState<EventMedia[]>([]);
+
+  // Fisher-Yates shuffle algorithm
+  const shuffleArray = <T,>(array: T[]): T[] => {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  };
+
+  useEffect(() => {
+    const artistEvent = EVENTS_DATA.find(e => e.id === 'work-with-artist');
+    if (artistEvent && artistEvent.media) {
+      setShuffledMedia(shuffleArray(artistEvent.media));
+    }
+  }, []);
 
   // Scroll animations for each event block
   useGSAP(() => {
@@ -68,8 +99,8 @@ export const Events: React.FC = () => {
         }
       );
 
-      // Fade and pop photos in collage
-      const photos = block.querySelectorAll('.collage-photo');
+      // Fade and pop photos/videos in collage and grid
+      const photos = block.querySelectorAll('.collage-photo, .grid-polaroid');
       gsap.fromTo(photos,
         { opacity: 0, scale: 0.85, y: 40 },
         {
@@ -136,7 +167,72 @@ export const Events: React.FC = () => {
       <div className="events-section-container">
         {EVENTS_DATA.map((event, idx) => {
           const isEven = idx % 2 === 0;
-          const isFullWidth = event.photos.length > 4;
+
+          if (event.media) {
+            return (
+              <div key={event.id} className="event-block block-full-width">
+                {/* Text section */}
+                <div className="event-text-side text-center-aligned">
+                  <span className="event-number">{event.num}</span>
+                  <h3 className="event-title">{event.title}</h3>
+                  <p className="event-description max-w-none">{event.description}</p>
+                </div>
+
+                {/* Media grid */}
+                <div className="artist-media-grid">
+                  {shuffledMedia.map((item) => {
+                    const isVideo = item.type === 'video';
+                    const isLandscapeVideo = isVideo && item.src.includes('teejay.mp4');
+
+                    if (isVideo) {
+                      return (
+                        <div
+                          key={item.src}
+                          className="grid-polaroid video-photo-card"
+                          style={{ cursor: 'default' }}
+                        >
+                          <div className={`grid-polaroid-media-wrapper ${isLandscapeVideo ? 'landscape-media' : ''}`}>
+                            <video
+                              src={item.src}
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              style={{ pointerEvents: 'none' }}
+                            />
+                          </div>
+                        </div>
+                      );
+                    } else {
+                      const photoOnlyList = shuffledMedia
+                        .filter(m => m.type === 'photo')
+                        .map(m => ({ src: m.src, caption: m.caption }));
+
+                      return (
+                        <div
+                          key={item.src}
+                          className="grid-polaroid"
+                          onClick={() => handlePhotoClick(item.src, photoOnlyList)}
+                          style={{ cursor: 'pointer' }}
+                        >
+                          <div className="grid-polaroid-media-wrapper">
+                            <img
+                              src={item.src}
+                              alt={item.caption}
+                              loading="lazy"
+                            />
+                          </div>
+                        </div>
+                      );
+                    }
+                  })}
+                </div>
+              </div>
+            );
+          }
+
+          const isVideos = !!event.videos;
+          const isFullWidth = isVideos ? false : (event.photos ? event.photos.length > 4 : false);
 
           if (isFullWidth) {
             return (
@@ -148,10 +244,10 @@ export const Events: React.FC = () => {
                   <p className="event-description max-w-none">{event.description}</p>
                 </div>
 
-                {/* Photos grid */}
+                {/* Media grid */}
                 <div className="event-photos-side-full">
                   <div className="event-collage-8">
-                    {event.photos.map((photo, pIdx) => {
+                    {event.photos && event.photos.map((photo, pIdx) => {
                       const positionClasses = [
                         'photo-8-1', 'photo-8-2', 'photo-8-3', 'photo-8-4',
                         'photo-8-5', 'photo-8-6', 'photo-8-7', 'photo-8-8'
@@ -160,7 +256,7 @@ export const Events: React.FC = () => {
                         <div
                           key={photo.src}
                           className={`collage-photo ${positionClasses[pIdx]}`}
-                          onClick={() => handlePhotoClick(photo.src, event.photos)}
+                          onClick={() => handlePhotoClick(photo.src, event.photos || [])}
                         >
                           <img
                             src={photo.src}
@@ -189,31 +285,58 @@ export const Events: React.FC = () => {
                 <p className="event-description">{event.description}</p>
               </div>
 
-              {/* Photos collage column */}
+              {/* Photos/Videos collage column */}
               <div className="event-photos-side">
                 <div className="event-collage">
-                  {event.photos.map((photo, pIdx) => {
-                    const positionClasses = [
-                      'photo-top-left',
-                      'photo-top-right',
-                      'photo-bottom-left',
-                      'photo-bottom-right'
-                    ];
-                    return (
-                      <div
-                        key={photo.src}
-                        className={`collage-photo ${positionClasses[pIdx]}`}
-                        onClick={() => handlePhotoClick(photo.src, event.photos)}
-                      >
-                        <img
-                          src={photo.src}
-                          alt={photo.caption}
-                          className="collage-img"
-                          loading="lazy"
-                        />
-                      </div>
-                    );
-                  })}
+                  {isVideos && event.videos ? (
+                    event.videos.map((video, pIdx) => {
+                      const positionClasses = [
+                        'video-pos-1',
+                        'video-pos-2',
+                        'video-pos-3'
+                      ];
+                      return (
+                        <div
+                          key={video.src}
+                          className={`collage-photo ${positionClasses[pIdx]} video-photo-card`}
+                          style={{ cursor: 'default' }}
+                        >
+                          <video
+                            src={video.src}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="collage-img"
+                            style={{ pointerEvents: 'none' }}
+                          />
+                        </div>
+                      );
+                    })
+                  ) : (
+                    event.photos && event.photos.map((photo, pIdx) => {
+                      const positionClasses = [
+                        'photo-top-left',
+                        'photo-top-right',
+                        'photo-bottom-left',
+                        'photo-bottom-right'
+                      ];
+                      return (
+                        <div
+                          key={photo.src}
+                          className={`collage-photo ${positionClasses[pIdx]}`}
+                          onClick={() => handlePhotoClick(photo.src, event.photos || [])}
+                        >
+                          <img
+                            src={photo.src}
+                            alt={photo.caption}
+                            className="collage-img"
+                            loading="lazy"
+                          />
+                        </div>
+                      );
+                    })
+                  )}
                   {event.review && (
                     <div className="collage-photo photo-center-review review-card">
                       <div className="review-card-content">

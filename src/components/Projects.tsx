@@ -24,15 +24,35 @@ interface Project {
 
 const PROJECTS_DATA: Project[] = [
   {
-    id: 'engagement',
+    id: 'proposal',
     num: '01',
+    title: 'PROPOSAL',
+    description: 'THE EXACT SECOND YOUR LIFE CHANGES FOREVER. WE DISCREETLY DOCUMENT THE BREATHLESS ANTICIPATION, THE GENUINE SURPRISE, AND THE OVERWHELMING EMOTION OF YOUR PROPOSAL. A RAW, UNSCRIPTED MILESTONE CAPTURED WITH PURE CINEMATIC ELEGANCE.',
+    photos: [
+      { src: '/proposal_6/DSC09263.jpg', caption: 'THE SURPRISE' },
+      { src: '/proposal_6/DSC09290.jpg', caption: 'SAYING YES' },
+      { src: '/proposal_6/DSC09353.jpg', caption: 'THE RING' },
+      { src: '/proposal_6/DSC09385.jpg', caption: 'PURE JOY' },
+      { src: '/proposal_6/DSC09641.jpg', caption: 'TENDER EMBRACE' },
+      { src: '/proposal_6/DSC09681.jpg', caption: 'FOREVER TOGETHER' }
+    ],
+    review: {
+      text: "AN UNFORGETTABLE MOMENT CAPTURED SO BEAUTIFULLY AND DISCREETLY. WE WILL CHERISH THIS FOREVER.",
+      author: "Emma & James"
+    }
+  },
+  {
+    id: 'engagement',
+    num: '02',
     title: 'ENGAGEMENT',
     description: 'THE OPENING CHAPTER OF YOUR SHARED COMMITMENT. WE CAPTURE THE SPONTANEOUS JOY, THE WARMTH OF YOUR FAMILIES, AND THE INITIAL STEPS OF YOUR LIFETIME JOURNEY THROUGH LUMINOUS, AUTHENTIC, AND EMOTIONALLY CHARGED FRAMES.',
     photos: [
-      { src: '/civil_wedding/AJ408720.JPG', caption: 'THE EMBRACE' },
-      { src: '/civil_wedding/AJ408736.JPG', caption: 'NEW CHAPTER' },
-      { src: '/civil_wedding/AJ408760.JPG', caption: 'SWEET PROMISE' },
-      { src: '/civil_wedding/AJ408768.JPG', caption: 'CHAMPAGNE SHOT' }
+      { src: '/engagement_6/DSC01263.jpg', caption: 'MOMENT OF LOVE' },
+      { src: '/engagement_6/DSC01351.jpg', caption: 'THE ENGAGEMENT' },
+      { src: '/engagement_6/DSC01405.jpg', caption: 'IN EACH OTHER\'S ARMS' },
+      { src: '/engagement_6/DSC01805.jpg', caption: 'SWEET WALK' },
+      { src: '/engagement_6/DSC01867.jpg', caption: 'TENDER LOOK' },
+      { src: '/engagement_6/DSC01984.jpg', caption: 'ETERNAL BOND' }
     ],
     review: {
       text: "A PERFECT STORYTELLING EXPERIENCE. HIGHLY PROFESSIONAL AND OUTSTANDING QUALITY.",
@@ -41,14 +61,14 @@ const PROJECTS_DATA: Project[] = [
   },
   {
     id: 'preshoot',
-    num: '02',
+    num: '03',
     title: 'PRESHOOT',
-    description: 'A TIMELESS INTERLUDE, CAPTURED UNDER THE SOFT GLOW OF THE GOLDEN HOUR IN A LOCATION TAILORED TO YOUR STORY. THIS INTIMATE SESSION ALLOWS YOU TO CONNECT EFFORTLESSLY WITH THE LENS WHILE CREATING A POLISHED, CINEMATIC PREVIEW FILM—PERFECT FOR OFFICIALLY REVEALING YOUR WEDDING DATE TO YOUR GUESTS.',
+    description: 'A TIMELESS INTERLUDE, CAPTURED UNDER THE SOFT GLOW OF THE GOLDEN HOUR IN A LOCATION TAILORED TO YOUR STORY. THIS INTIMATE SESSION ALLOWS YOU TO CONNECT EFFORTLESSLY WITH THE LENS WHILE CREATING A POLISHED, CINEMATIC PREVIEW FILM PERFECT FOR OFFICIALLY REVEALING YOUR WEDDING DATE TO YOUR GUESTS.',
     photos: [
-      { src: '/civil_wedding/AJ408644.JPG', caption: 'GOLDEN HOUR' },
-      { src: '/civil_wedding/AJ408671.JPG', caption: 'QUIET MOMENT' },
-      { src: '/civil_wedding/AJ408678.JPG', caption: 'RAW LIGHT' },
-      { src: '/civil_wedding/AJ408718.JPG', caption: 'SOFT SMILE' }
+      { src: '/preshoot_6/FJ_(192).jpg', caption: 'GOLDEN HOUR' },
+      { src: '/preshoot_6/FJ_(350).jpg', caption: 'QUIET MOMENT' },
+      { src: '/preshoot_6/FJ_(744).jpg', caption: 'RAW LIGHT' },
+      { src: '/preshoot_6/FJ_(853).jpg', caption: 'SOFT SMILE' }
     ],
     review: {
       text: "WE FELT SO RELAXED AND COMFORTABLE. THE GOLDEN HOUR SHOTS ARE PURE MAGIC.",
@@ -57,14 +77,16 @@ const PROJECTS_DATA: Project[] = [
   },
   {
     id: 'civil-wedding',
-    num: '03',
+    num: '04',
     title: 'CIVIL WEDDING & RECEPTION',
     description: 'THE ELEGANCE OF YOUR FIRST PROMISES COMBINED WITH THE GRANDEUR OF YOUR CELEBRATION. FROM THE INTIMACY OF THE MORNING PREPARATIONS TO THE ELECTRIC ENERGY OF THE DANCE FLOOR, EVERY MOMENT IS CAPTURED WITH A SHARP, MODERN CINEMATIC AESTHETIC. MORE THAN JUST A MEMORY, THIS IS THE AUTHENTIC AND COMPELLING FEATURE FILM OF YOUR DEFINITIVE DAY.',
     photos: [
-      { src: '/civil_wedding/1.jpg', caption: 'THE VOWS' },
-      { src: '/civil_wedding/AJ401092.JPG', caption: 'WARMING TONES' },
-      { src: '/civil_wedding/AJ401105.JPG', caption: 'TRUE LOVE' },
-      { src: '/civil_wedding/AJ401346.JPG', caption: 'GOLDEN HOUR' }
+      { src: '/civil_6/DSC02581.jpg', caption: 'THE VOWS' },
+      { src: '/civil_6/DSC02993.jpg', caption: 'JOYFUL SMILES' },
+      { src: '/civil_6/DSC03129.jpg', caption: 'TENDER MOMENT' },
+      { src: '/civil_6/DSC03198.jpg', caption: 'STUNNING PORTRAIT' },
+      { src: '/civil_6/DSC03365.jpg', caption: 'CELEBRATION' },
+      { src: '/civil_6/DSC03431.jpg', caption: 'HAPPY TOGETHER' }
     ],
     review: {
       text: "JANAR CAPTURED THE TRUE ESSENCE OF OUR DAY. EVERY FRAME FEELS SO ALIVE AND AUTHENTIC.",
@@ -73,14 +95,16 @@ const PROJECTS_DATA: Project[] = [
   },
   {
     id: 'hindu-wedding',
-    num: '04',
+    num: '05',
     title: 'CULTURAL & TRADITIONAL WEDDINGS',
     description: 'THE BRILLIANCE OF COLORS, THE DEPTH OF SACRED RITUALS, AND THE RICHNESS OF SHARED CULTURAL HERITAGE. WE DOCUMENT TRADITIONAL CELEBRATIONS WITH ABSOLUTE REVERENCE FOR THEIR SYMBOLS. OUR GOAL IS TO ELEVATE THE JOINING OF YOUR TWO FAMILIES INTO A VISUALLY POWERFUL, EPIC CINEMATIC JOURNEY.',
     photos: [
       { src: '/civil_wedding/AJ401364.JPG', caption: 'SACRED UNION' },
       { src: '/civil_wedding/AJ401374.JPG', caption: 'THE RITUAL' },
       { src: '/civil_wedding/AJ401672 (1).JPG', caption: 'VIBRANT JOY' },
-      { src: '/civil_wedding/AJ408638.JPG', caption: 'ETERNAL PROMISE' }
+      { src: '/civil_wedding/AJ408638.JPG', caption: 'ETERNAL PROMISE' },
+      { src: '/civil_wedding/AJ408780.JPG', caption: 'TRADITIONAL VIBES' },
+      { src: '/civil_wedding/AJ408827.JPG', caption: 'CULTURAL HERITAGE' }
     ],
     review: {
       text: "ABSOLUTELY STUNNING VIDEOGRAPHY! THE VIBRANT COLORS AND RITUALS WERE PRESERVED BEAUTIFULLY.",
@@ -88,8 +112,6 @@ const PROJECTS_DATA: Project[] = [
     }
   }
 ];
-
-
 
 export const Projects: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -199,7 +221,7 @@ export const Projects: React.FC = () => {
               {/* Photos collage column */}
               <div className="project-photos-side">
                 <div className="project-collage">
-                  {project.photos.map((photo, pIdx) => {
+                  {project.photos.slice(0, 4).map((photo, pIdx) => {
                     const positionClasses = [
                       'photo-top-left',
                       'photo-top-right',
